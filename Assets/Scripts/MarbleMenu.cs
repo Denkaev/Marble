@@ -16,6 +16,13 @@ public class MarbleMenu : MonoBehaviour
 
     public void LoadNextScene(string sceneName)
     {
+        
+        if (SceneManager.GetActiveScene().name == "Start")
+        {
+            //int number = int.Parse(input.text);
+            GlobalVariables.LefttCount = 1;
+            GlobalVariables.RightCount = 2;
+        }
         SceneManager.LoadScene(sceneName);
     }
 
