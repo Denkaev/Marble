@@ -7,7 +7,7 @@ public class Settings : MonoBehaviour
 
     private void CheckCount(GameObject InField)
     {
-        //int number = int.Parse(input.text);
+      
     }
 
 }

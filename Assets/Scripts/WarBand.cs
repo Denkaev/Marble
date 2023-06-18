@@ -8,7 +8,7 @@ public class WarBand     : MonoBehaviour
     void Start()
     {
         Debug.Log("Правые " + GlobalVariables.RightCount);
-        Debug.Log("Левые " + GlobalVariables.LefttCount);
+        Debug.Log("Левые " + GlobalVariables.LeftCount);
     }
 
  }

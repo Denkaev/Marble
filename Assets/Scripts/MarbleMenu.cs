@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MarbleMenu : MonoBehaviour
 {
+    [SerializeField] GameObject LeftCount;
+    [SerializeField] GameObject RightCount;
+        
     public void Exit()
     {
 #if UNITY_EDITOR
@@ -19,9 +23,9 @@ public class MarbleMenu : MonoBehaviour
         
         if (SceneManager.GetActiveScene().name == "Start")
         {
-            //int number = int.Parse(input.text);
-            GlobalVariables.LefttCount = 1;
-            GlobalVariables.RightCount = 2;
+                GlobalVariables.LeftCount   = int.Parse(LeftCount.GetComponent<InputField>().text);
+                GlobalVariables.RightCount  = int.Parse(RightCount.GetComponent<InputField>().text);
+
         }
         SceneManager.LoadScene(sceneName);
     }
